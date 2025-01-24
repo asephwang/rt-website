@@ -6,62 +6,99 @@
     <title>Website Desa</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
+            color: #333;
         }
         header {
-            background: #006400;
+            background: linear-gradient(90deg, #006400, #228B22);
             color: #fff;
-            padding: 1rem 0;
+            padding: 2rem 0;
             text-align: center;
         }
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin: 0.5rem 0 0;
+        }
         nav {
-            background: #228B22;
-            display: flex;justify-content: center;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
             padding: 0.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav a {
-            color: #fff;
+            color: #006400;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 20px;
             font-weight: bold;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s, color 0.3s;
         }
         nav a:hover {
-            text-decoration: underline;
+            background-color: #006400;
+            color: #fff;
+            border-radius: 5px;
         }
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: auto;
-            padding: 1rem;
+            padding: 2rem 1rem;
         }
         .section {
             background: #fff;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
         }
         footer {
             background: #006400;
             color: #fff;
             text-align: center;
-            padding: 1rem 0;
-            margin-top: 1rem;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
         }
         h1, h2 {
-            color: #333;
+            color: #228B22;
         }
         ul {
-            list-style: disc inside;
+            list-style: none;
+            padding: 0;
         }
         ul li {
             margin: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        ul li:before {
+            content: '\2713';
+            color: #006400;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
         }
         p {
-            color: #555;
+            line-height: 1.6;
         }
     </style>
 </head>
